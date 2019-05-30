@@ -22,7 +22,10 @@ function App() {
       renderMark={(props, editor, next) => {
         console.log('yo', props)
         if (props.mark.type === 'highlight') {
-          return <span style={{ background: 'lightblue' }} {...props.attributes}>
+          return <span
+            style={{ background: 'red', color: 'white', }}
+            {...props.attributes}
+          >
             {props.children}
           </span>
         } else {
